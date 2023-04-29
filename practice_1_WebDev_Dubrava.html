@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <div class="desktop-2 screen">
+  <div class="overlap-group">
+   <div class="rectangle-1"></div>
+   <p class="help inter-normal-oyster-pink-36px">About us</p><!-- Закрыть тег на месте -->
+   <h1 class="master2">DOCsSTORAGE</h1>
+   <p class="we-will-keep-your-do">We will keep your documents in any volume and for any period</p>
+  </div>
+  <button id="btn">click me</button> //кнопка для изменения текста с id master2
+
+  <script>
+   const btn = document.getElementById('btn');
+   btn.addEventListener('click', function master() {
+    var master = document.getElementsByClassName("master2");
+    master[0].innerHTML = 'text after click))';
+   });
+  </script>
+
+  <script>
+   fetch('https://644bfb6a4bdbc0cc3a9f7b2e.mockapi.io/asd')
+     .then((response) => {
+    return response.json();
+     })
+     .then((data) => {
+    console.log(data);
+     });
+  </script>
+  <script>
+   /*1*/var value = prompt("Vvedite 4islo = ");
+   alert("Vashe 4islo = " + value);
+
+   /*2*/
+   let firstNumber = Number(prompt("Vvedite pervoe 4islo:"));
+   let secondNumber = Number(prompt("Vvedite vtoroe 4islo:"));
+   let char = prompt("Viberite operation (+, -, *, /)")
+   let result;
+
+   switch (char) {
+    case '+':
+      result = firstNumber + secondNumber;
+      break;
+    case '-':
+      result = firstNumber - secondNumber;
+      break;
+    case '*':
+      result = firstNumber * secondNumber;
+      break;
+    case '/':
+      if (secondNumber === 0) {
+     alert("Error: division by zero");
+      } else {
+     result = firstNumber / secondNumber;
+     alert(result);
+      }
+      break;
+   }
+
+   /*3*/
+   let imgNum = Number(prompt("Zagadayte 4islo:"));
+   let result1;
+
+   result1 = imgNum * 2 + 7;
+   alert("Итог: " + result1)
+   alert("Вы задумали: " + imgNum);
+
+   /*4*/
+   let name = prompt("Vvedite vashe imya:");
+   let yearOfBirth = prompt("Vvedite vash god rozhdeniya:");
+
+   let currentYear = new Date().getFullYear();
+   let age = currentYear - yearOfBirth;
+   document.write(`<p>${name}: ${age}</p>`);
+  </script>
+ </div>
+</body>
+</html>
