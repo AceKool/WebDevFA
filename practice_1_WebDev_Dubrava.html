@@ -15,7 +15,7 @@
   </div>
   <button id="btn">click me</button> //кнопка для изменения текста с id master2
 
-  <script>
+  <script> // 1ое задание 7ой лабы
    const btn = document.getElementById('btn');
    btn.addEventListener('click', function master() {
     var master = document.getElementsByClassName("master2");
@@ -23,7 +23,7 @@
    });
   </script>
 
-  <script>
+  <script> // 2ое задание 7ой лабы
    fetch('https://644bfb6a4bdbc0cc3a9f7b2e.mockapi.io/asd')
      .then((response) => {
     return response.json();
@@ -32,11 +32,12 @@
     console.log(data);
      });
   </script>
+  // 1ая лаба - основы JS
   <script>
    /*1*/var value = prompt("Vvedite 4islo = ");
    alert("Vashe 4islo = " + value);
 
-   /*2*/
+   /*2*/ // простой калькулятор
    let firstNumber = Number(prompt("Vvedite pervoe 4islo:"));
    let secondNumber = Number(prompt("Vvedite vtoroe 4islo:"));
    let char = prompt("Viberite operation (+, -, *, /)")
